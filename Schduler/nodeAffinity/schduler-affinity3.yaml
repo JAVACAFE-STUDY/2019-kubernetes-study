@@ -1,0 +1,22 @@
+kind: Pod
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+        # foo == A or B
+        - key: foo
+          operator: In
+          values:
+          - A
+          - B
+      preferredDuringSchedulingIgnoredDuringExecution:
+        preference:
+        - weight: 1
+          matchExpressions:
+          # foo == A
+          - key: foo
+            operator: In
+            values:
+            - A
