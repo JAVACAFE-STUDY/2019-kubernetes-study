@@ -1,4 +1,5 @@
 # Table of contents
 
-* [Initial page](README.md)
+* [Modern Java in Action](README.md)
+* [Chapter1](chapter1.md)
 
